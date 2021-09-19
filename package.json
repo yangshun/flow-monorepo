@@ -6,21 +6,20 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src/ -d lib/",
     "dev": "cross-env NODE_ENV=development babel-node src/index.js",
-    "flow": "flow",
     "start": "yarn dev",
     "start:prod": "yarn build && node lib/index.js"
   },
   "author": "tay.yang.shun@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/node": "^7.6.2",
-    "@babel/plugin-syntax-class-properties": "^7.2.0",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-flow": "^7.0.0",
-    "cross-env": "^6.0.0",
-    "flow-bin": "^0.108.0",
-    "flow-typed": "^2.2.3"
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.7",
+    "@babel/node": "^7.15.7",
+    "@babel/preset-env": "^7.15.7",
+    "@babel/preset-flow": "^7.15.7",
+    "@babel/preset-react": "^7.15.7",
+    "cross-env": "^7.0.3",
+    "flow-bin": "^0.160.0",
+    "flow-typed": "^3.3.1"
   }
 }
