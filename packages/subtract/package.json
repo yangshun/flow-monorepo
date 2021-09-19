@@ -10,7 +10,10 @@
     "access": "public"
   },
   "version": "0.0.3",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel --root-mode upward src -d dist/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/yangshun/nodejs-flow-boilerplate",
