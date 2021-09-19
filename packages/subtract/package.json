@@ -1,0 +1,16 @@
+{
+  "name": "@yangshun/subtract",
+  "author": {
+    "name": "Yangshun Tay",
+    "email": "tay.yang.shun@gmail.com"
+  },
+  "description": "Subtracts two numbers",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangshun/nodejs-flow-boilerplate",
+    "directory": "packages/subtract"
+  }
+}
