@@ -16,6 +16,4 @@ all=warn
 
 [options]
 exact_by_default=true
-
-module.name_mapper='@yangshun/add' -> '<PROJECT_ROOT>/packages/add/src/index.js'
-module.name_mapper='@yangshun/subtract' -> '<PROJECT_ROOT>/packages/subtract/src/index.js'
+module.name_mapper='^@yangshun/\(.+\)$' -> '<PROJECT_ROOT>/packages/\1/src/index.js'
