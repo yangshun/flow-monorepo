@@ -10,11 +10,18 @@ Template repository to demonstrate how to set up a monorepo with Flow. Other too
 - Prettier
 - Yarn
 
-## Install
+## Getting started
+
+Install dependencies
 
 ```sh
 $ yarn
 ```
+
+Rename package scope. Search for `@yangshun` in the repository and make the following changes:
+
+1. Update import statements in `packages`
+1. Update the Jest/Flow config mapping in `jest.config.js` and `.flowconfig`
 
 ## Directory structure
 
