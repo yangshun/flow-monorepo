@@ -3,6 +3,7 @@
 Template repository to demonstrate how to set up a monorepo with Flow. Other tools include:
 
 - Babel
+- ESLint
 - Flow
 - Jest
 - Lerna
@@ -40,5 +41,6 @@ $ yarn
 - `yarn check-all` - Runs all necessary checks. Useful for CI environments
 - `yarn clean` - Removes all the `dist` directories in each package
 - `yarn flow` - Checks the `package` directory for Flow violations
+- `yarn lint` - Checks the `package` directory for ESLint violations
 - `yarn test` - Tests all the files with Jest
 - `yarn publish-packages` - Runs Lerna publish
