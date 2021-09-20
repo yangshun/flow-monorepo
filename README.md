@@ -36,6 +36,7 @@ $ yarn
 
 ## Commands
 
-- `yarn test` - Tests all the files with Jest
 - `yarn build` - Runs the `build` command in each directory in `package` via Lerna
+- `yarn clean` - Removes all the `dist` directories in each package
+- `yarn test` - Tests all the files with Jest
 - `yarn publish-packages` - Runs Lerna publish
