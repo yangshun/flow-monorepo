@@ -12,7 +12,9 @@
   "private": true,
   "scripts": {
     "build": "yarn clean && lerna run build",
+    "check-all": "yarn flow",
     "clean": "rimraf packages/**/dist/",
+    "flow": "flow",
     "publish-packages": "lerna publish",
     "test": "jest"
   },

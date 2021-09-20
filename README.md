@@ -37,6 +37,8 @@ $ yarn
 ## Commands
 
 - `yarn build` - Runs the `build` command in each directory in `package` via Lerna
+- `yarn check-all` - Runs all necessary checks. Useful for CI environments
 - `yarn clean` - Removes all the `dist` directories in each package
+- `yarn flow` - Checks the `package` directory for Flow violations
 - `yarn test` - Tests all the files with Jest
 - `yarn publish-packages` - Runs Lerna publish
