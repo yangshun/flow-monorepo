@@ -12,8 +12,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "start": "yarn dev",
-    "start:prod": "yarn build && node lib/index.js",
+    "publish-packages": "lerna publish",
     "test": "jest"
   },
   "license": "MIT",

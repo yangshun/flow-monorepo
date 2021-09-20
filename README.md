@@ -1,17 +1,41 @@
-# Node.js + Flow Boilerplate
+# Flow Monorepo
 
-## How to use
+Template repository to demonstrate how to set up a monorepo with Flow. Other tools include:
 
-Install dependencies:
+- Babel
+- Flow
+- Jest
+- Lerna
+- Prettier
+- Yarn
+
+## Install
+
+```sh
+$ yarn
+```
+
+## Directory structure
 
 ```
-$ yarn
+├── packages
+│   ├── bar
+│   │   ├── __tests__
+│   │   │   └── bar.test.js
+│   │   ├── src
+│   │   │   └── index.js
+│   │   └── package.json
+│   └── foo
+│       ├── __tests__
+│       │   └── foo.test.js
+│       ├── src
+│       │   └── index.js
+│       └── package.json
+└── package.json
 ```
 
 ## Commands
 
-- `yarn dev` - Runs `index.js` from the `src` files with `babel-node` which compiles the code in memory.
-- `yarn start` - Alias for `yarn dev`.
-- `yarn flow` - Runs Flow for the files in `src`.
-- `yarn build` - Compiles `src` using Babel with `NODE_ENV=production` into `lib`.
-- `yarn start:prod` - Compiles `src` using Babel into `lib` and runs `index.js` from the `lib` files.
+- `yarn test` - Tests all the files with Jest
+- `yarn build` - Runs the `build` command in each directory in `package` via Lerna
+- `yarn publish-packages` - Runs Lerna publish
