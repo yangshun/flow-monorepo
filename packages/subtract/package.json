@@ -9,7 +9,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "cjs/subtract.js",
   "module": "es/subtract.js",
   "unpkg": "umd/subtract.js",
