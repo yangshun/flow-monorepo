@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yangshun/nodejs-flow-boilerplate",
+    "url": "https://github.com/yangshun/flow-monorepo",
     "directory": "packages/subtract"
   },
   "gitHead": "edf1fb6fbb9f6c08999c1942c740a71ccd4073c6"

@@ -1,6 +1,6 @@
 {
   "description": "Node.js + Flow boilerplate",
-  "name": "nodejs-flow-boilerplate",
+  "name": "flow-monorepo",
   "version": "0.0.1",
   "author": {
     "name": "Yangshun Tay",
