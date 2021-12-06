@@ -1,6 +1,7 @@
 'use strict';
 
 const babel = require('@rollup/plugin-babel');
+const replace = require('@rollup/plugin-replace');
 const resolve = require('@rollup/plugin-node-resolve');
 const rollup = require('rollup');
 const terserPlugin = require('rollup-plugin-terser');
@@ -8,10 +9,19 @@ const terserPlugin = require('rollup-plugin-terser');
 const fs = require('fs');
 const path = require('path');
 
-const developmentPlugins = [babel.default({babelHelpers: 'bundled'})];
+const developmentPlugins = [
+  replace({
+    preventAssignment: true,
+    'process.env.NODE_ENV': JSON.stringify('development'),
+  }),
+  babel.default({babelHelpers: 'bundled'}),
+];
 
 const productionPlugins = [
-  // TODO: Add replace.
+  replace({
+    preventAssignment: true,
+    'process.env.NODE_ENV': JSON.stringify('production'),
+  }),
   babel.default({
     exclude: 'node_modules/**',
     babelHelpers: 'bundled',
