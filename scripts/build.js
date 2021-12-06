@@ -21,7 +21,7 @@ function generateConfig({dirName, packageJSON}) {
         exports: 'auto',
         indent: false,
       },
-      plugins: [resolve.default(), babel.default({babelHelpers: 'runtime'})],
+      plugins: [resolve.default(), babel.default({babelHelpers: 'bundled'})],
     },
     // ES modules.
     {
@@ -31,7 +31,7 @@ function generateConfig({dirName, packageJSON}) {
         format: 'es',
         indent: false,
       },
-      plugins: [resolve.default(), babel.default({babelHelpers: 'runtime'})],
+      plugins: [resolve.default(), babel.default({babelHelpers: 'bundled'})],
     },
     // ES modules for Browsers.
     {

@@ -11,7 +11,7 @@
   ],
   "private": true,
   "scripts": {
-    "build": "yarn clean && lerna run build",
+    "build": "yarn clean && node ./scripts/build.js",
     "check-all": "yarn flow && yarn lint",
     "clean": "rimraf packages/**/{cjs,es,umd}/",
     "flow": "flow",
@@ -20,7 +20,6 @@
     "lint": "npm run lint:report -- --fix",
     "lint:report": "eslint packages",
     "publish-packages": "lerna publish",
-    "rollup": "rollup -c rollup.config.js",
     "test": "jest"
   },
   "license": "MIT",
