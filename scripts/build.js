@@ -3,12 +3,28 @@
 const babel = require('@rollup/plugin-babel');
 const resolve = require('@rollup/plugin-node-resolve');
 const rollup = require('rollup');
+const terserPlugin = require('rollup-plugin-terser');
 
 const fs = require('fs');
 const path = require('path');
 
+const developmentPlugins = [babel.default({babelHelpers: 'bundled'})];
+
+const productionPlugins = [
+  // TODO: Add replace.
+  babel.default({
+    exclude: 'node_modules/**',
+    babelHelpers: 'bundled',
+  }),
+  terserPlugin.terser({
+    mangle: false,
+  }),
+];
+
 function generateConfig({dirName, packageJSON}) {
-  // Adapted from Redux's rollup.config.js.
+  // Adapted from Redux and Recoil's rollup.config.js.
+
+  // TODO: Specify external dependencies.
 
   const input = path.resolve(`./packages/${dirName}/src/index.js`);
   return [
@@ -19,9 +35,8 @@ function generateConfig({dirName, packageJSON}) {
         file: path.resolve(`./packages/${dirName}/cjs/${dirName}.js`),
         format: 'cjs',
         exports: 'auto',
-        indent: false,
       },
-      plugins: [resolve.default(), babel.default({babelHelpers: 'bundled'})],
+      plugins: [resolve.default(), ...developmentPlugins],
     },
     // ES modules.
     {
@@ -29,9 +44,8 @@ function generateConfig({dirName, packageJSON}) {
       output: {
         file: path.resolve(`./packages/${dirName}/es/${dirName}.js`),
         format: 'es',
-        indent: false,
       },
-      plugins: [resolve.default(), babel.default({babelHelpers: 'bundled'})],
+      plugins: [resolve.default(), ...developmentPlugins],
     },
     // ES modules for Browsers.
     {
@@ -41,14 +55,7 @@ function generateConfig({dirName, packageJSON}) {
         format: 'es',
         indent: false,
       },
-      plugins: [
-        resolve.default(),
-        babel.default({
-          exclude: 'node_modules/**',
-          babelHelpers: 'bundled',
-        }),
-        // TODO: Add replace and terser.
-      ],
+      plugins: [resolve.default(), ...productionPlugins],
     },
     // UMD development.
     {
@@ -57,9 +64,8 @@ function generateConfig({dirName, packageJSON}) {
         file: path.resolve(`./packages/${dirName}/umd/${dirName}.js`),
         format: 'umd',
         name: dirName,
-        indent: false,
       },
-      plugins: [resolve.default(), babel.default({babelHelpers: 'bundled'})],
+      plugins: [resolve.default(), ...developmentPlugins],
     },
     // UMD production.
     {
@@ -70,14 +76,7 @@ function generateConfig({dirName, packageJSON}) {
         name: dirName,
         indent: false,
       },
-      plugins: [
-        resolve.default(),
-        babel.default({
-          exclude: 'node_modules/**',
-          babelHelpers: 'bundled',
-        }),
-        // TODO: Add replace and terser.
-      ],
+      plugins: [resolve.default(), ...productionPlugins],
     },
     // TODO: Add React Native.
   ];
