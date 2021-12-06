@@ -13,13 +13,14 @@
   "scripts": {
     "build": "yarn clean && lerna run build",
     "check-all": "yarn flow && yarn lint",
-    "clean": "rimraf packages/**/dist/",
+    "clean": "rimraf packages/**/{cjs,es,umd}/",
     "flow": "flow",
     "prettier": "prettier --write \"**/*.js\"",
     "prettier:report": "prettier --check \"**/*.js\"",
     "lint": "npm run lint:report -- --fix",
     "lint:report": "eslint packages",
     "publish-packages": "lerna publish",
+    "rollup": "rollup -c rollup.config.js",
     "test": "jest"
   },
   "license": "MIT",
@@ -30,6 +31,8 @@
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-flow": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
@@ -46,6 +49,7 @@
     "jest": "^27.2.0",
     "lerna": "^4.0.0",
     "prettier": "^2.5.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "rollup": "^2.60.2"
   }
 }

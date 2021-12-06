@@ -10,7 +10,14 @@
     "access": "public"
   },
   "version": "0.0.3",
-  "main": "dist/index.js",
+  "main": "cjs/add.js",
+  "module": "es/add.js",
+  "unpkg": "umd/add.js",
+  "files": [
+    "cjs",
+    "es",
+    "umd"
+  ],
   "scripts": {
     "build": "cross-env NODE_ENV=production babel --root-mode upward src -d dist/"
   },
