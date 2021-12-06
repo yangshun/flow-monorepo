@@ -10,17 +10,14 @@
     "access": "public"
   },
   "version": "0.0.4",
-  "main": "cjs/add.js",
-  "module": "es/add.js",
-  "unpkg": "umd/add.js",
+  "main": "cjs/subtract.js",
+  "module": "es/subtract.js",
+  "unpkg": "umd/subtract.js",
   "files": [
     "cjs",
     "es",
     "umd"
   ],
-  "scripts": {
-    "build": "cross-env NODE_ENV=production babel --root-mode upward src -d dist/"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/yangshun/flow-monorepo",

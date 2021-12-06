@@ -17,9 +17,9 @@
     "flow": "flow",
     "prettier": "prettier --write \"**/*.js\"",
     "prettier:report": "prettier --check \"**/*.js\"",
+    "publish-packages": "lerna publish",
     "lint": "npm run lint:report -- --fix",
     "lint:report": "eslint packages",
-    "publish-packages": "lerna publish",
     "test": "jest"
   },
   "license": "MIT",

@@ -8,6 +8,8 @@ Template repository to demonstrate how to set up a monorepo with Flow. Other too
 - Jest
 - Lerna
 - Prettier
+- Rollup
+- Terser
 - Yarn
 
 ## Getting started
@@ -44,10 +46,13 @@ Rename package scope. Search for `@yangshun` in the repository and make the foll
 
 ## Commands
 
-- `yarn build` - Runs the `build` command in each directory in `package` via Lerna
+- `yarn build` - Runs rollup on all packages to build bundles for each environment
 - `yarn check-all` - Runs all necessary checks. Useful for CI environments
-- `yarn clean` - Removes all the `dist` directories in each package
-- `yarn flow` - Checks the `package` directory for Flow violations
-- `yarn lint` - Checks the `package` directory for ESLint violations
-- `yarn test` - Tests all the files with Jest
+- `yarn clean` - Removes all the rollup bundle directories in each package
+- `yarn flow` - Checks the `packages` directory for Flow violations
+- `yarn prettier` - Formats all the files in all the JS files
+- `yarn prettier:report` - Reports any formatting violations in all the JS files
 - `yarn publish-packages` - Runs Lerna publish
+- `yarn lint` - Fixes the ESLint violations in all the JS files
+- `yarn lint:report` - Reports ESLint violations in all the JS files
+- `yarn test` - Tests all the files with Jest
