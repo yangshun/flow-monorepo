@@ -3,5 +3,10 @@
   "npmClient": "yarn",
   "packages": [
     "packages/*"
-  ]
+  ],
+  "command": {
+    "exec": {
+      "ignore": "config"
+    }
+  }
 }

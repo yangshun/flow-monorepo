@@ -18,9 +18,16 @@
     "es",
     "umd"
   ],
+  "scripts": {
+    "lint": "eslint src --fix"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/yangshun/flow-monorepo",
     "directory": "packages/add"
+  },
+  "devDependencies": {
+    "config": "*",
+    "eslint": "^7.32.0"
   }
 }
