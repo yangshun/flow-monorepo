@@ -47,7 +47,7 @@ Rename package scope. Search for `@yangshun` in the repository and make the foll
 ## Commands
 
 - `yarn build` - Runs rollup on all packages to build bundles for each environment
-- `yarn check-all` - Runs all necessary checks. Useful for CI environments
+- `yarn check-all` - Runs all necessary checks, tests and builds. Useful for CI environments
 - `yarn clean` - Removes all the rollup bundle directories in each package
 - `yarn flow` - Checks the `packages` directory for Flow violations
 - `yarn prettier` - Formats all the files in all the JS files

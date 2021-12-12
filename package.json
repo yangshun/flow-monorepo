@@ -12,7 +12,7 @@
   "private": true,
   "scripts": {
     "build": "yarn clean && node ./scripts/build.js",
-    "check-all": "yarn flow && yarn lint",
+    "check-all": "yarn flow && yarn lint && yarn test && yarn build",
     "clean": "rimraf packages/**/{cjs,es,umd}/",
     "flow": "flow",
     "prettier": "prettier --write \"**/*.js\"",
