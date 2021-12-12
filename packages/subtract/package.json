@@ -19,7 +19,9 @@
     "umd"
   ],
   "scripts": {
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "lint-test": "yarn lint && yarn test",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "config": "*",
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "jest": "^27.2.0"
   }
 }

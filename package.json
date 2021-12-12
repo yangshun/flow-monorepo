@@ -18,9 +18,9 @@
     "prettier": "prettier --write \"**/*.js\"",
     "prettier:report": "prettier --check \"**/*.js\"",
     "publish-packages": "lerna publish",
-    "lint": "lerna exec -- yarn lint",
-    "lint:report": "eslint packages",
-    "test": "jest"
+    "lint": "lerna run lint --parallel",
+    "test": "lerna run test --parallel",
+    "lint-test": "lerna run lint-test --parallel"
   },
   "license": "MIT",
   "devDependencies": {

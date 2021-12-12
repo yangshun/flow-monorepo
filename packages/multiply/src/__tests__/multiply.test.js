@@ -1,4 +1,4 @@
-import multiply from '@yangshun/multiply';
+import multiply from '../';
 
 test('multiply', () => {
   expect(multiply(3, 2)).toBe(6);

@@ -1,4 +1,4 @@
-import subtract from '@yangshun/subtract';
+import subtract from '../';
 
 test('subtract', () => {
   expect(subtract(3, 2)).toBe(1);
