@@ -11,16 +11,21 @@
   ],
   "private": true,
   "scripts": {
-    "build": "yarn clean && node ./scripts/build.js",
     "check-all": "yarn flow && yarn lint && yarn test && yarn build",
     "clean": "rimraf packages/**/{cjs,es,umd}/",
     "flow": "flow",
     "prettier": "prettier --write \"**/*.js\"",
     "prettier:report": "prettier --check \"**/*.js\"",
     "publish-packages": "lerna publish",
+    "all": "lerna run all --parallel",
+    "all:turbo": "turbo run lint test build",
     "lint": "lerna run lint --parallel",
+    "lint:turbo": "turbo run lint",
     "test": "lerna run test --parallel",
-    "lint-test": "lerna run lint-test --parallel"
+    "lint-test": "lerna run lint-test --parallel",
+    "test:turbo": "turbo run test",
+    "build": "lerna run build --parallel",
+    "build:turbo": "turbo run build"
   },
   "license": "MIT",
   "devDependencies": {
@@ -33,8 +38,8 @@
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-replace": "^3.0.0",
-    "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
     "flow-bin": "^0.166.1",
     "flow-typed": "^3.3.1",
     "jest": "^27.2.0",
@@ -42,6 +47,24 @@
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.60.2",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "turbo": "^1.0.6"
+  },
+  "turbo": {
+    "pipeline": {
+      "build": {
+        "outputs": [
+          "cjs/**",
+          "es/**",
+          "umd/**"
+        ]
+      },
+      "test": {
+        "outputs": []
+      },
+      "lint": {
+        "outputs": []
+      }
+    }
   }
 }

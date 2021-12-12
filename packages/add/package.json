@@ -19,8 +19,9 @@
     "umd"
   ],
   "scripts": {
+    "all": "yarn lint && yarn test && yarn build",
+    "build": "rollup --config",
     "lint": "eslint src --fix",
-    "lint-test": "yarn lint && yarn test",
     "test": "jest"
   },
   "repository": {
