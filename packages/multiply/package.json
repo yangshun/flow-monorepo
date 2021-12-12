@@ -1,0 +1,26 @@
+{
+  "name": "@yangshun/multiply",
+  "author": {
+    "name": "Yangshun Tay",
+    "email": "tay.yang.shun@gmail.com"
+  },
+  "description": "Multiplies two numbers",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.5",
+  "main": "cjs/multiply.js",
+  "module": "es/multiply.js",
+  "unpkg": "umd/multiply.js",
+  "files": [
+    "cjs",
+    "es",
+    "umd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangshun/flow-monorepo",
+    "directory": "packages/multiply"
+  }
+}

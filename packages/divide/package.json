@@ -1,0 +1,26 @@
+{
+  "name": "@yangshun/divide",
+  "author": {
+    "name": "Yangshun Tay",
+    "email": "tay.yang.shun@gmail.com"
+  },
+  "description": "Multiplies two numbers",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.5",
+  "main": "cjs/divide.js",
+  "module": "es/divide.js",
+  "unpkg": "umd/divide.js",
+  "files": [
+    "cjs",
+    "es",
+    "umd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangshun/flow-monorepo",
+    "directory": "packages/divide"
+  }
+}
