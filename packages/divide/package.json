@@ -9,7 +9,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "cjs/divide.js",
   "module": "es/divide.js",
   "unpkg": "umd/divide.js",
@@ -29,7 +29,7 @@
     "directory": "packages/divide"
   },
   "devDependencies": {
-    "config": "*",
+    "config": "^0.0.6",
     "eslint": "^7.32.0",
     "jest": "^27.2.0",
     "rollup": "^2.60.2"
